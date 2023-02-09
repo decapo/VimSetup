@@ -61,4 +61,20 @@ return require('packer').startup(function(use)
     use('RRethy/vim-illuminate')
     use('junegunn/fzf')
     use('junegunn/fzf.vim')
+
+    use {
+        'saecki/crates.nvim',
+        tag = 'v0.3.0',
+        requires = { 'nvim-lua/plenary.nvim' },
+        config = function()
+            require('crates').setup()
+        end,
+    }
+
+    use('karb94/neoscroll.nvim')
+    use('norcalli/nvim-colorizer.lua')
+    use {
+        "windwp/nvim-autopairs",
+        config = function() require("nvim-autopairs").setup {} end
+    }
 end)
