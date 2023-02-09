@@ -29,8 +29,8 @@ vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
-vim.keymap.set("n", "<leader>r", ":Rg")
-vim.keymap.set("n", "<leader>c", ":Commands<cr>")
+vim.keymap.set("n", "<leader>r", ":Rg<CR>")
+vim.keymap.set("n", "<leader>c", ":Commands<CR>")
 
 vim.keymap.set("n", "<leader>o", "o<Esc>")
 vim.keymap.set("n", "<leader>O", "O<Esc>")
