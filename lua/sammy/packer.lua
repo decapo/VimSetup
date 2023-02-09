@@ -57,11 +57,5 @@ return require('packer').startup(function(use)
     }
     use("github/copilot.vim")
     use("tpope/vim-commentary")
-    use({
-        'ggandor/leap.nvim',
-        as = 'leap',
-        config = function()
-            require("leap").setup()
-        end
-    })
+    use('ggandor/leap.nvim')
 end)
