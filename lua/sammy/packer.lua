@@ -11,22 +11,27 @@ return require('packer').startup(function(use)
         -- or                            , branch = '0.1.x',
         requires = { { 'nvim-lua/plenary.nvim' } }
     }
-    use({
-        'rose-pine/neovim',
-        as = 'rose-pine',
-        config = function()
-            require("rose-pine").setup()
-            vim.cmd('colorscheme rose-pine')
-        end
-    })
+
+    use('nyoom-engineering/oxocarbon.nvim')
+
+    use('savq/melange-nvim')
 
     -- use({
-    --     'morhetz/gruvbox',
-    --     as = 'gruvbox',
+    --     'rose-pine/neovim',
+    --     as = 'rose-pine',
     --     config = function()
-    --         vim.cmd('colorscheme gruvbox')
+    --         require("rose-pine").setup()
+    --         vim.cmd('colorscheme rose-pine')
     --     end
     -- })
+
+    use({
+        'luisiacc/gruvbox-baby',
+        as = 'gruvbox-baby',
+        config = function()
+            vim.cmd('colorscheme gruvbox-baby')
+        end
+    })
 
     use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
     use('nvim-treesitter/playground')
