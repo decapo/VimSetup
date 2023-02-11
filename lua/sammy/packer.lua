@@ -12,13 +12,23 @@ return require('packer').startup(function(use)
         requires = { { 'nvim-lua/plenary.nvim' } }
     }
 
+
     use({
-        'catppuccin/vim',
-        as = 'catppuccin',
+        'rebelot/kanagawa.nvim',
+        as = 'kanagawa',
         config = function()
-            vim.cmd('colorscheme catppuccin_macchiato')
+            vim.cmd('colorscheme kanagawa')
         end
     })
+
+    -- use({
+    --     'catppuccin/vim',
+    --     as = 'catppuccin',
+    --     config = function()
+    --         vim.cmd('colorscheme catppuccin_macchiato')
+    --     end
+    -- })
+
     -- use('nyoom-engineering/oxocarbon.nvim')
 
     -- use('savq/melange-nvim')

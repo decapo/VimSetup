@@ -1,8 +1,17 @@
-vim.opt.background = "dark" -- set this to dark or light
-vim.g.lightline = {
-    colorscheme = "catppuccin_macchiato",
-}
 vim.g.mapleader = " "
+vim.opt.background = "dark" -- set this to dark or light
+
+-- vim.g.lightline = {
+--     colorscheme = "catppuccin_macchiato",
+-- }
+
+vim.keymap.set("n", "<leader>w", vim.cmd.w)
+
+vim.api.nvim_create_autocmd("BufWritePre", {
+    pattern = { "*.rs", "*.lua" },
+    callback = vim.lsp.buf.format,
+})
+
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
