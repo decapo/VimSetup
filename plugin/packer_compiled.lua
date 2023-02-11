@@ -79,6 +79,12 @@ _G.packer_plugins = {
     path = "/Users/sammynouri/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  catppuccin = {
+    config = { "\27LJ\2\nD\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0%colorscheme catppuccin_macchiato\bcmd\bvim\0" },
+    loaded = true,
+    path = "/Users/sammynouri/.local/share/nvim/site/pack/packer/start/catppuccin",
+    url = "https://github.com/catppuccin/vim"
+  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/Users/sammynouri/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -130,12 +136,6 @@ _G.packer_plugins = {
     path = "/Users/sammynouri/.local/share/nvim/site/pack/packer/start/fzf.vim",
     url = "https://github.com/junegunn/fzf.vim"
   },
-  ["gruvbox-baby"] = {
-    config = { "\27LJ\2\n<\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\29colorscheme gruvbox-baby\bcmd\bvim\0" },
-    loaded = true,
-    path = "/Users/sammynouri/.local/share/nvim/site/pack/packer/start/gruvbox-baby",
-    url = "https://github.com/luisiacc/gruvbox-baby"
-  },
   harpoon = {
     loaded = true,
     path = "/Users/sammynouri/.local/share/nvim/site/pack/packer/start/harpoon",
@@ -145,6 +145,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/sammynouri/.local/share/nvim/site/pack/packer/start/leap.nvim",
     url = "https://github.com/ggandor/leap.nvim"
+  },
+  ["lightline.vim"] = {
+    loaded = true,
+    path = "/Users/sammynouri/.local/share/nvim/site/pack/packer/start/lightline.vim",
+    url = "https://github.com/itchyny/lightline.vim"
   },
   ["lsp-zero.nvim"] = {
     loaded = true,
@@ -160,11 +165,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/sammynouri/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
-  },
-  ["melange-nvim"] = {
-    loaded = true,
-    path = "/Users/sammynouri/.local/share/nvim/site/pack/packer/start/melange-nvim",
-    url = "https://github.com/savq/melange-nvim"
   },
   ["neoscroll.nvim"] = {
     loaded = true,
@@ -196,11 +196,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/sammynouri/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
-  },
-  ["oxocarbon.nvim"] = {
-    loaded = true,
-    path = "/Users/sammynouri/.local/share/nvim/site/pack/packer/start/oxocarbon.nvim",
-    url = "https://github.com/nyoom-engineering/oxocarbon.nvim"
   },
   ["packer.nvim"] = {
     loaded = true,
@@ -241,6 +236,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/sammynouri/.local/share/nvim/site/pack/packer/start/vim-illuminate",
     url = "https://github.com/RRethy/vim-illuminate"
+  },
+  ["vim-surround"] = {
+    loaded = true,
+    path = "/Users/sammynouri/.local/share/nvim/site/pack/packer/start/vim-surround",
+    url = "https://github.com/tpope/vim-surround"
   }
 }
 
@@ -249,14 +249,14 @@ time([[Defining packer_plugins]], false)
 time([[Config for nvim-autopairs]], true)
 try_loadstring("\27LJ\2\n@\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0", "config", "nvim-autopairs")
 time([[Config for nvim-autopairs]], false)
+-- Config for: catppuccin
+time([[Config for catppuccin]], true)
+try_loadstring("\27LJ\2\nD\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0%colorscheme catppuccin_macchiato\bcmd\bvim\0", "config", "catppuccin")
+time([[Config for catppuccin]], false)
 -- Config for: crates.nvim
 time([[Config for crates.nvim]], true)
 try_loadstring("\27LJ\2\n4\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\vcrates\frequire\0", "config", "crates.nvim")
 time([[Config for crates.nvim]], false)
--- Config for: gruvbox-baby
-time([[Config for gruvbox-baby]], true)
-try_loadstring("\27LJ\2\n<\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\29colorscheme gruvbox-baby\bcmd\bvim\0", "config", "gruvbox-baby")
-time([[Config for gruvbox-baby]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

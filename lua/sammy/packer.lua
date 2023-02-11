@@ -12,9 +12,16 @@ return require('packer').startup(function(use)
         requires = { { 'nvim-lua/plenary.nvim' } }
     }
 
-    use('nyoom-engineering/oxocarbon.nvim')
+    use({
+        'catppuccin/vim',
+        as = 'catppuccin',
+        config = function()
+            vim.cmd('colorscheme catppuccin_macchiato')
+        end
+    })
+    -- use('nyoom-engineering/oxocarbon.nvim')
 
-    use('savq/melange-nvim')
+    -- use('savq/melange-nvim')
 
     -- use({
     --     'rose-pine/neovim',
@@ -25,13 +32,14 @@ return require('packer').startup(function(use)
     --     end
     -- })
 
-    use({
-        'luisiacc/gruvbox-baby',
-        as = 'gruvbox-baby',
-        config = function()
-            vim.cmd('colorscheme gruvbox-baby')
-        end
-    })
+    -- use({
+    --     'luisiacc/gruvbox-baby',
+    --     as = 'gruvbox-baby',
+    --     config = function()
+    --         vim.cmd('colorscheme gruvbox-baby')
+    --     end
+    -- })
+
 
     use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
     use('nvim-treesitter/playground')
@@ -82,4 +90,6 @@ return require('packer').startup(function(use)
         "windwp/nvim-autopairs",
         config = function() require("nvim-autopairs").setup {} end
     }
+    use('tpope/vim-surround')
+    use('itchyny/lightline.vim')
 end)
