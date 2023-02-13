@@ -1,5 +1,6 @@
 vim.g.mapleader = " "
 vim.opt.background = "dark" -- set this to dark or light
+vim.cmd.colorscheme = "moonbow"
 
 -- vim.g.lightline = {
 --     colorscheme = "catppuccin_macchiato",
