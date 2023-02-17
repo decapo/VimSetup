@@ -117,6 +117,15 @@ return require('packer').startup(function(use)
     }
 
     use('tpope/vim-surround')
+
     use('itchyny/lightline.vim')
+
     use('mattn/emmet-vim')
+
+    use {
+        'lukas-reineke/indent-blankline.nvim',
+        config = function()
+            require('indent_blankline').setup()
+        end
+    }
 end)

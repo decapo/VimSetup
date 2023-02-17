@@ -1,4 +1,6 @@
 vim.g.mapleader = " "
+vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
+
 vim.opt.background = "dark" -- set this to dark or light
 -- vim.cmd.colorscheme = "moonbow"
 
@@ -7,6 +9,8 @@ vim.opt.background = "dark" -- set this to dark or light
 -- }
 
 vim.keymap.set("n", "<leader>w", vim.cmd.w)
+
+vim.keymap.set("n", "<leader><leader>", ":")
 
 vim.keymap.set("n", "<Tab>", ";")
 
