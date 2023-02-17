@@ -1,6 +1,6 @@
 vim.g.mapleader = " "
 vim.opt.background = "dark" -- set this to dark or light
-vim.cmd.colorscheme = "moonbow"
+-- vim.cmd.colorscheme = "moonbow"
 
 -- vim.g.lightline = {
 --     colorscheme = "catppuccin_macchiato",
@@ -8,8 +8,10 @@ vim.cmd.colorscheme = "moonbow"
 
 vim.keymap.set("n", "<leader>w", vim.cmd.w)
 
+vim.keymap.set("n", "<Tab>", ";")
+
 vim.api.nvim_create_autocmd("BufWritePre", {
-    pattern = { "*.rs", "*.lua" },
+    pattern = { "*.rs", "*.lua", "*.html" },
     callback = vim.lsp.buf.format,
 })
 
