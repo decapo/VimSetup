@@ -2,20 +2,23 @@ vim.g.mapleader = " "
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 
 vim.opt.background = "dark" -- set this to dark or light
--- vim.cmd.colorscheme = "moonbow"
 
--- vim.g.lightline = {
---     colorscheme = "catppuccin_macchiato",
--- }
+vim.keymap.set("n", "<leader>cr", "<cmd>CargoRun<CR>")
+vim.keymap.set("n", "<leader>ct", "<cmd>CargoTest<CR>")
+vim.keymap.set("n", "<leader>cb", "<cmd>CargoBuild<CR>")
+vim.keymap.set("n", "<leader>cc", "<cmd>CargoCheck<CR>")
+
+vim.keymap.set("n", "<leader>ca", "<cmd>%y+<CR>")
+vim.keymap.set("n", "<leader>da", "<cmd>%d+<CR>")
 
 vim.keymap.set("n", "<leader>w", vim.cmd.w)
 
-vim.keymap.set("n", "<leader><leader>", ":")
+vim.keymap.set("n", "<leader><leader>", "<cmd>FineCmdline<CR>")
 
 vim.keymap.set("n", "<Tab>", ";")
 
 vim.api.nvim_create_autocmd("BufWritePre", {
-    pattern = { "*.rs", "*.lua", "*.html" },
+    pattern = { "*.rs", "*.lua", "*.html", "*.js", "*.mjs" },
     callback = vim.lsp.buf.format,
 })
 
@@ -50,7 +53,6 @@ vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
 vim.keymap.set("n", "<leader>r", ":Rg<CR>")
-vim.keymap.set("n", "<leader>c", ":Commands<CR>")
 
 vim.keymap.set("n", "<leader>o", "o<Esc>")
 vim.keymap.set("n", "<leader>O", "O<Esc>")
@@ -73,3 +75,4 @@ vim.keymap.set("n", "ySS", "<Plug>YSsurround")
 -- " so in theory, `gs` could be useful for Leap too...
 vim.keymap.set("n", "gs", "<Plug>VSurround")
 vim.keymap.set("v", "gS", "<Plug>VgSurround")
+

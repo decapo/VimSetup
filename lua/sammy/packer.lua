@@ -128,4 +128,37 @@ return require('packer').startup(function(use)
             require('indent_blankline').setup()
         end
     }
+
+    -- Lua
+    use {
+        'abecodes/tabout.nvim',
+        config = function()
+            require('tabout').setup()
+        end,
+        wants = { 'nvim-treesitter' },
+        after = { 'nvim-cmp' }
+    }
+    -- use('stevearc/dressing.nvim')
+    use {
+        'VonHeikemen/fine-cmdline.nvim',
+        requires = {
+            { 'MunifTanjim/nui.nvim' }
+        }
+    }
+
+    use('timonv/vim-cargo')
+    use('godlygeek/tabular')
+
+    -- install without yarn or npm
+    use({
+        "iamcco/markdown-preview.nvim",
+        run = function() vim.fn["mkdp#util#install"]() end,
+    })
+
+    use({
+        "iamcco/markdown-preview.nvim",
+        run = "cd app && npm install",
+        setup = function() vim.g.mkdp_filetypes = { "markdown" } end,
+        ft = { "markdown" },
+    })
 end)
