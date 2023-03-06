@@ -8,6 +8,12 @@ vim.keymap.set("n", "<leader>ct", "<cmd>CargoTest<CR>")
 vim.keymap.set("n", "<leader>cb", "<cmd>CargoBuild<CR>")
 vim.keymap.set("n", "<leader>cc", "<cmd>CargoCheck<CR>")
 
+vim.keymap.set("n", "<leader>l", "<C-w>l")
+vim.keymap.set("n", "<leader>h", "<C-w>h")
+vim.keymap.set("n", "<leader>nn", "<C-w><C-v>")
+
+vim.keymap.set("n", "<leader>qq", "<cmd>q<CR>")
+
 vim.keymap.set("n", "<leader>ca", "<cmd>%y+<CR>")
 vim.keymap.set("n", "<leader>da", "<cmd>%d+<CR>")
 
@@ -75,4 +81,3 @@ vim.keymap.set("n", "ySS", "<Plug>YSsurround")
 -- " so in theory, `gs` could be useful for Leap too...
 vim.keymap.set("n", "gs", "<Plug>VSurround")
 vim.keymap.set("v", "gS", "<Plug>VgSurround")
-
