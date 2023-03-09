@@ -12,14 +12,14 @@ vim.keymap.set("n", "<leader>l", "<C-w>l")
 vim.keymap.set("n", "<leader>h", "<C-w>h")
 vim.keymap.set("n", "<leader>nn", "<C-w><C-v>")
 
-vim.keymap.set("n", "<leader>qq", "<cmd>q<CR>")
+vim.keymap.set("n", "qq", "<cmd>q<CR>")
 
 vim.keymap.set("n", "<leader>ca", "<cmd>%y+<CR>")
-vim.keymap.set("n", "<leader>da", "<cmd>%d+<CR>")
+vim.keymap.set("n", "<leader>da", "<cmd>%d<CR>")
 
 vim.keymap.set("n", "<leader>w", vim.cmd.w)
 
-vim.keymap.set("n", "<leader><leader>", "<cmd>FineCmdline<CR>")
+vim.keymap.set("n", ":", "<cmd>FineCmdline<CR>")
 
 vim.keymap.set("n", "<Tab>", ";")
 
