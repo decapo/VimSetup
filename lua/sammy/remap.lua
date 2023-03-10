@@ -82,6 +82,7 @@ vim.keymap.set("n", "yS", "<Plug>YSurround")
 vim.keymap.set("n", "yss", "<Plug>Yssurround")
 vim.keymap.set("n", "ySs", "<Plug>YSsurround")
 vim.keymap.set("n", "ySS", "<Plug>YSsurround")
+vim.keymap.set("n", "<leader>t", "<Plug>Ysurround" .. "iw")
 
 -- " The conflicting ones. Note that `<Plug>(leap-cross-window)`
 -- " _does_ work in Visual mode, if jumping to the same buffer,
