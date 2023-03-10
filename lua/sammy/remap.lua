@@ -65,6 +65,12 @@ vim.keymap.set("n", "<leader>o", "o<Esc>")
 vim.keymap.set("n", "<leader>O", "O<Esc>")
 require('leap').add_default_mappings()
 require('neoscroll').setup()
+require("zen-mode").setup {
+    window = {
+        backdrop = 0.95,
+        width = .8,
+    },
+}
 
 vim.g.surround_no_mappings = 1
 -- " Just the defaults copied here.
