@@ -68,6 +68,11 @@ vim.keymap.set("n", "<leader>r", ":Rg<CR>")
 vim.keymap.set("n", "<leader>o", "o<Esc>")
 vim.keymap.set("n", "<leader>O", "O<Esc>")
 require('leap').add_default_mappings()
+vim.keymap.set("n", "s", function()
+    local current_window = vim.fn.win_getid()
+    require('leap').leap { target_windows = { current_window } }
+end)
+
 require('neoscroll').setup()
 require("zen-mode").setup {
     window = {
