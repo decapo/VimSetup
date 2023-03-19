@@ -98,3 +98,5 @@ vim.keymap.set("n", "<leader>t", "<Plug>Ysurround" .. "iw")
 -- " so in theory, `gs` could be useful for Leap too...
 vim.keymap.set("n", "gs", "<Plug>VSurround")
 vim.keymap.set("v", "gS", "<Plug>VgSurround")
+
+vim.keymap.set("n", "<leader>se", "<cmd>SearchSession<CR>")

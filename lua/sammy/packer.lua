@@ -152,4 +152,6 @@ return require('packer').startup(function(use)
             require('session-lens').setup({ --[[your custom config--]] })
         end
     }
+
+    use { 'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async' }
 end)
