@@ -111,22 +111,20 @@ return require('packer').startup(function(use)
     use('timonv/vim-cargo')
     use('godlygeek/tabular')
 
-    use({
-        "iamcco/markdown-preview.nvim",
-        run = "cd app && npm install",
-        setup = function() vim.g.mkdp_filetypes = { "markdown" } end,
-        ft = { "markdown" },
-    })
+    -- use({
+    --     "iamcco/markdown-preview.nvim",
+    --     run = "cd app && npm install",
+    --     setup = function() vim.g.mkdp_filetypes = { "markdown" } end,
+    --     ft = { "markdown" },
+    -- })
 
-    -- use {
-    --     'nvim-tree/nvim-tree.lua',
-    --     requires = {
-    --         'nvim-tree/nvim-web-devicons', -- optional, for file icons
-    --     },
-    --     tag = 'nightly'                    -- optional, updated every week. (see issue #1193)
-    -- }
-
-    use("folke/zen-mode.nvim")
+    use {
+        'nvim-tree/nvim-tree.lua',
+        requires = {
+            'nvim-tree/nvim-web-devicons', -- optional, for file icons
+        },
+        tag = 'nightly'                    -- optional, updated every week. (see issue #1193)
+    }
 
     use({
         "https://git.sr.ht/~whynothugo/lsp_lines.nvim",
@@ -134,24 +132,6 @@ return require('packer').startup(function(use)
             require("lsp_lines").setup()
         end,
     })
-
-    use {
-        'rmagatti/auto-session',
-        config = function()
-            require("auto-session").setup {
-                log_level = "error",
-                auto_session_suppress_dirs = { "~/", "~/Projects", "~/Downloads", "/" },
-            }
-        end
-    }
-
-    use {
-        'rmagatti/session-lens',
-        requires = { 'rmagatti/auto-session', 'nvim-telescope/telescope.nvim' },
-        config = function()
-            require('session-lens').setup({ --[[your custom config--]] })
-        end
-    }
 
     use { 'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async' }
 end)

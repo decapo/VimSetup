@@ -74,12 +74,6 @@ vim.keymap.set("n", "s", function()
 end)
 
 require('neoscroll').setup()
-require("zen-mode").setup {
-    window = {
-        backdrop = 0.95,
-        width = .8,
-    },
-}
 
 vim.g.surround_no_mappings = 1
 -- " Just the defaults copied here.
@@ -100,3 +94,32 @@ vim.keymap.set("n", "gs", "<Plug>VSurround")
 vim.keymap.set("v", "gS", "<Plug>VgSurround")
 
 vim.keymap.set("n", "<leader>se", "<cmd>SearchSession<CR>")
+
+vim.keymap.set(
+    "",
+    "<Leader>e",
+    require("lsp_lines").toggle,
+    { desc = "Toggle lsp_lines" }
+)
+
+-- local function netrw_mapping()
+--     local bufnr = vim.api.nvim_get_current_buf()
+--     local function buf_map(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
+
+--     buf_map("n", "H", "u", { noremap = true, silent = true })
+--     buf_map("n", "h", "-^", { noremap = true, silent = true })
+--     buf_map("n", "l", "<CR>", { noremap = true, silent = true })
+
+--     buf_map("n", ".", "gh", { noremap = true, silent = true })
+--     buf_map("n", "P", "<C-w>z", { noremap = true, silent = true })
+
+--     buf_map("n", "L", "<CR>:Lexplore<CR>", { noremap = true, silent = true })
+--     buf_map("n", vim.g.mapleader .. "dd", ":Lexplore<CR>", { noremap = true, silent = true })
+-- end
+
+-- vim.cmd([[
+--   augroup netrw_mapping
+--     autocmd!
+--     autocmd filetype netrw lua netrw_mapping()
+--   augroup END
+-- ]])
