@@ -33,14 +33,12 @@ vim.api.nvim_create_autocmd("BufWritePre", {
     callback = vim.lsp.buf.format,
 })
 
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+-- vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 vim.keymap.set("n", "J", "mzJ`z")
-vim.keymap.set("n", "<C-d>", "<C-d>zz")
-vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
@@ -60,6 +58,9 @@ vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
 -- vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz")
 -- vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
 -- vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
+--
+vim.keymap.set("n", "<C-k>", "<C-u>zz")
+vim.keymap.set("n", "<C-j>", "<C-d>zz")
 
 vim.keymap.set("n", "<leader>ss", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
@@ -67,6 +68,7 @@ vim.keymap.set("n", "<leader>r", ":Rg<CR>")
 
 vim.keymap.set("n", "<leader>o", "o<Esc>")
 vim.keymap.set("n", "<leader>O", "O<Esc>")
+
 require('leap').add_default_mappings()
 vim.keymap.set("n", "s", function()
     local current_window = vim.fn.win_getid()
@@ -87,13 +89,9 @@ vim.keymap.set("n", "ySs", "<Plug>YSsurround")
 vim.keymap.set("n", "ySS", "<Plug>YSsurround")
 vim.keymap.set("n", "<leader>t", "<Plug>Ysurround" .. "iw")
 
--- " The conflicting ones. Note that `<Plug>(leap-cross-window)`
--- " _does_ work in Visual mode, if jumping to the same buffer,
--- " so in theory, `gs` could be useful for Leap too...
+-- " The conflicting ones.
 vim.keymap.set("n", "gs", "<Plug>VSurround")
 vim.keymap.set("v", "gS", "<Plug>VgSurround")
-
-vim.keymap.set("n", "<leader>se", "<cmd>SearchSession<CR>")
 
 vim.keymap.set(
     "",
@@ -101,25 +99,3 @@ vim.keymap.set(
     require("lsp_lines").toggle,
     { desc = "Toggle lsp_lines" }
 )
-
--- local function netrw_mapping()
---     local bufnr = vim.api.nvim_get_current_buf()
---     local function buf_map(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
-
---     buf_map("n", "H", "u", { noremap = true, silent = true })
---     buf_map("n", "h", "-^", { noremap = true, silent = true })
---     buf_map("n", "l", "<CR>", { noremap = true, silent = true })
-
---     buf_map("n", ".", "gh", { noremap = true, silent = true })
---     buf_map("n", "P", "<C-w>z", { noremap = true, silent = true })
-
---     buf_map("n", "L", "<CR>:Lexplore<CR>", { noremap = true, silent = true })
---     buf_map("n", vim.g.mapleader .. "dd", ":Lexplore<CR>", { noremap = true, silent = true })
--- end
-
--- vim.cmd([[
---   augroup netrw_mapping
---     autocmd!
---     autocmd filetype netrw lua netrw_mapping()
---   augroup END
--- ]])
