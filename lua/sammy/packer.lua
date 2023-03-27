@@ -134,4 +134,13 @@ return require('packer').startup(function(use)
     })
 
     use { 'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async' }
+
+    use {
+        "SmiteshP/nvim-navbuddy",
+        requires = {
+            "neovim/nvim-lspconfig",
+            "SmiteshP/nvim-navic",
+            "MunifTanjim/nui.nvim"
+        }
+    }
 end)
