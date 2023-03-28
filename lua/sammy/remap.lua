@@ -3,6 +3,8 @@ vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 
 vim.opt.background = "dark" -- set this to dark or light
 
+vim.opt.cursorline = true   -- highlight the current line
+
 vim.keymap.set("n", "<leader>cr", "<cmd>CargoRun<CR>")
 vim.keymap.set("n", "<leader>ct", "<cmd>CargoTest<CR>")
 vim.keymap.set("n", "<leader>cb", "<cmd>CargoBuild<CR>")
@@ -99,3 +101,8 @@ vim.keymap.set(
     require("lsp_lines").toggle,
     { desc = "Toggle lsp_lines" }
 )
+
+vim.keymap.set("n", "<leader>b", "<cmd>Navbuddy<CR>")
+
+local gitignore = require("gitignore")
+vim.keymap.set("n", "<leader>gi", gitignore.generate)
