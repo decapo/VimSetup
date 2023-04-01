@@ -70,6 +70,7 @@ navbuddy.setup {
             ["F"] = actions.fold_delete,      -- Delete fold of current scope
             ["c"] = actions.comment,          -- Comment out current scope
             ["<enter>"] = actions.select,     -- Goto selected symbol
+            ["L"] = actions.select,
             ["o"] = actions.select,
     },
     lsp = {

@@ -95,12 +95,12 @@ vim.keymap.set("n", "<leader>t", "<Plug>Ysurround" .. "iw")
 vim.keymap.set("n", "gs", "<Plug>VSurround")
 vim.keymap.set("v", "gS", "<Plug>VgSurround")
 
-vim.keymap.set(
-    "",
-    "<Leader>e",
-    require("lsp_lines").toggle,
-    { desc = "Toggle lsp_lines" }
-)
+-- vim.keymap.set(
+--     "",
+--     "<Leader>e",
+--     require("lsp_lines").toggle,
+--     { desc = "Toggle lsp_lines" }
+-- )
 
 vim.keymap.set("n", "<leader>b", "<cmd>Navbuddy<CR>")
 
