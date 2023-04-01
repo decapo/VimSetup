@@ -112,13 +112,6 @@ return require('packer').startup(function(use)
     use('timonv/vim-cargo')
     use('godlygeek/tabular')
 
-    -- use({
-    --     "iamcco/markdown-preview.nvim",
-    --     run = "cd app && npm install",
-    --     setup = function() vim.g.mkdp_filetypes = { "markdown" } end,
-    --     ft = { "markdown" },
-    -- })
-
     use {
         'nvim-tree/nvim-tree.lua',
         requires = {
@@ -126,13 +119,6 @@ return require('packer').startup(function(use)
         },
         tag = 'nightly'                    -- optional, updated every week. (see issue #1193)
     }
-
-    -- use({
-    --     "https://git.sr.ht/~whynothugo/lsp_lines.nvim",
-    --     config = function()
-    --         require("lsp_lines").setup()
-    --     end,
-    -- })
 
     use { 'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async' }
 
