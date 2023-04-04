@@ -5,7 +5,7 @@ vim.opt.background = "dark" -- set this to dark or light
 
 vim.opt.cursorline = true   -- highlight the current line
 
-vim.keymap.set("n", "<leader>cr", "<cmd>CargoRun<CR>")
+vim.keymap.set("n", "<leader>cr", "<cmd>CargoRun --release<CR>")
 vim.keymap.set("n", "<leader>ct", "<cmd>CargoTest<CR>")
 vim.keymap.set("n", "<leader>cb", "<cmd>CargoBuild<CR>")
 vim.keymap.set("n", "<leader>cc", "<cmd>CargoCheck<CR>")
