@@ -131,7 +131,7 @@ return require('packer').startup(function(use)
         }
     }
 
-    use {
-        "wintermute-cell/gitignore.nvim"
-    }
+    use("wintermute-cell/gitignore.nvim")
+
+    use('evanleck/vim-svelte')
 end)
