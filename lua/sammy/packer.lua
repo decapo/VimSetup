@@ -81,7 +81,17 @@ return require('packer').startup(function(use)
 
     use('tpope/vim-surround')
 
-    use('itchyny/lightline.vim')
+    -- use('itchyny/lightline.vim')
+    use {
+        'nvim-lualine/lualine.nvim',
+        options = {
+            theme = 'moonbow'
+        },
+        requires = { 'nvim-tree/nvim-web-devicons', opt = true },
+        config = function()
+            require('lualine').setup()
+        end
+    }
 
     use('mattn/emmet-vim')
 
