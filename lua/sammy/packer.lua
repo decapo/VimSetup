@@ -95,12 +95,12 @@ return require('packer').startup(function(use)
 
     use('mattn/emmet-vim')
 
-    use {
-        'lukas-reineke/indent-blankline.nvim',
-        config = function()
-            require('indent_blankline').setup()
-        end
-    }
+    -- use {
+    --     'lukas-reineke/indent-blankline.nvim',
+    --     config = function()
+    --         require('indent_blankline').setup()
+    --     end
+    -- }
 
     -- Lua
     use {
@@ -111,6 +111,7 @@ return require('packer').startup(function(use)
         wants = { 'nvim-treesitter' },
         after = { 'nvim-cmp' }
     }
+
     -- use('stevearc/dressing.nvim')
     use {
         'VonHeikemen/fine-cmdline.nvim',
@@ -120,7 +121,7 @@ return require('packer').startup(function(use)
     }
 
     use('timonv/vim-cargo')
-    use('godlygeek/tabular')
+    -- use('godlygeek/tabular')
 
     use {
         'nvim-tree/nvim-tree.lua',
@@ -144,4 +145,19 @@ return require('packer').startup(function(use)
     use("wintermute-cell/gitignore.nvim")
 
     use('evanleck/vim-svelte')
+
+    use {
+        "Fildo7525/pretty_hover",
+        config = function()
+            require("pretty_hover").setup()
+        end
+    }
+
+    use {
+        "folke/trouble.nvim",
+        requires = "nvim-tree/nvim-web-devicons",
+        config = function()
+            require("trouble").setup {}
+        end
+    }
 end)

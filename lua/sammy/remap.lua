@@ -19,6 +19,7 @@ vim.keymap.set("n", "<leader>nn", "<C-w><C-v>")
 vim.keymap.set("n", "<leader>nh", "<cmd>noh<CR>")
 
 vim.keymap.set("n", "qq", "<cmd>q<CR>")
+vim.keymap.set("n", "<leader>qq", "<cmd>q!<CR>")
 vim.keymap.set("n", "qa", "<cmd>qa<CR>")
 
 vim.keymap.set("n", "<leader>ca", "<cmd>%y+<CR>")
@@ -106,3 +107,27 @@ vim.keymap.set("n", "<leader>b", "<cmd>Navbuddy<CR>")
 
 local gitignore = require("gitignore")
 vim.keymap.set("n", "<leader>gi", gitignore.generate)
+
+vim.keymap.set("n", "<leader>xx", "<cmd>TroubleToggle<cr>",
+    { silent = true, noremap = true }
+)
+
+vim.keymap.set("n", "<leader>xw", "<cmd>TroubleToggle workspace_diagnostics<cr>",
+    { silent = true, noremap = true }
+)
+
+vim.keymap.set("n", "<leader>xd", "<cmd>TroubleToggle document_diagnostics<cr>",
+    { silent = true, noremap = true }
+)
+
+vim.keymap.set("n", "<leader>xl", "<cmd>TroubleToggle loclist<cr>",
+    { silent = true, noremap = true }
+)
+
+vim.keymap.set("n", "<leader>xq", "<cmd>TroubleToggle quickfix<cr>",
+    { silent = true, noremap = true }
+)
+
+vim.keymap.set("n", "gR", "<cmd>TroubleToggle lsp_references<cr>",
+    { silent = true, noremap = true }
+)
