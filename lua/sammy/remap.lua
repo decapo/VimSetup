@@ -16,7 +16,7 @@ vim.keymap.set("n", "<leader>j", "<C-w>j")
 vim.keymap.set("n", "<leader>k", "<C-w>k")
 vim.keymap.set("n", "<leader>nn", "<C-w><C-v>")
 
-vim.keymap.set("n", "<leader>nh", "<cmd>noh<CR>")
+-- vim.keymap.set("n", "<leader>nh", "<cmd>noh<CR>")
 
 vim.keymap.set("n", "qq", "<cmd>q<CR>")
 vim.keymap.set("n", "<leader>qq", "<cmd>q!<CR>")
@@ -131,3 +131,6 @@ vim.keymap.set("n", "<leader>xq", "<cmd>TroubleToggle quickfix<cr>",
 vim.keymap.set("n", "gR", "<cmd>TroubleToggle lsp_references<cr>",
     { silent = true, noremap = true }
 )
+
+vim.keymap.set('n', '<leader>nh', '<cmd>set hlsearch!<CR>',
+    { noremap = true, silent = true })
