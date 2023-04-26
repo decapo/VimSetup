@@ -16,9 +16,11 @@ vim.keymap.set("n", "<leader>j", "<C-w>j")
 vim.keymap.set("n", "<leader>k", "<C-w>k")
 vim.keymap.set("n", "<leader>nn", "<C-w><C-v>")
 
+vim.keymap.set("n", "<leader>;", "<cmd>FineCmdline<CR>")
+
 -- vim.keymap.set("n", "<leader>nh", "<cmd>noh<CR>")
 
-vim.keymap.set("n", "qq", "<cmd>q<CR>")
+vim.keymap.set("n", "qq", "<cmd>wq<CR>")
 vim.keymap.set("n", "<leader>qq", "<cmd>q!<CR>")
 vim.keymap.set("n", "qa", "<cmd>qa<CR>")
 
