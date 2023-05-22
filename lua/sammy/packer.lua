@@ -147,17 +147,9 @@ return require('packer').startup(function(use)
     use('evanleck/vim-svelte')
 
     use {
-        "Fildo7525/pretty_hover",
-        config = function()
-            require("pretty_hover").setup()
-        end
-    }
-
-    use {
         "folke/trouble.nvim",
-        requires = "nvim-tree/nvim-web-devicons",
         config = function()
-            require("trouble").setup {}
+            require("trouble").setup { icons = false }
         end
     }
 

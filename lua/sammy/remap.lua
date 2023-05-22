@@ -1,7 +1,7 @@
 vim.g.mapleader = " "
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 
-vim.opt.background = "dark" -- set this to dark or light
+-- vim.opt.background = "dark" -- set this to dark or light
 
 vim.opt.cursorline = true   -- highlight the current line
 
@@ -18,6 +18,8 @@ vim.keymap.set("n", "<leader>nn", "<C-w><C-v>")
 
 vim.keymap.set("n", "<leader>;", "<cmd>FineCmdline<CR>")
 
+vim.keymap.set("n", "#", "^")
+
 -- vim.keymap.set("n", "<leader>nh", "<cmd>noh<CR>")
 
 vim.keymap.set("n", "qq", "<cmd>wq<CR>")
@@ -32,6 +34,7 @@ vim.keymap.set("n", "<leader>w", vim.cmd.w)
 vim.keymap.set("n", ":", "<cmd>FineCmdline<CR>")
 
 vim.keymap.set("n", "<Tab>", ";")
+vim.keymap.set("v", "<Tab>", ";")
 
 vim.api.nvim_create_autocmd("BufWritePre", {
     pattern = { "*.rs", "*.lua", "*.html", "*.js", "*.mjs" },
