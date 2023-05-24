@@ -12,15 +12,24 @@ return require('packer').startup(function(use)
         requires = { { 'nvim-lua/plenary.nvim' } }
     }
 
-
-    use({
-        'arturgoms/moonbow.nvim',
-        as = 'moonbow',
+    -------------------------------------------------------
+    -- begin theme
+    -- use({
+    --     'arturgoms/moonbow.nvim',
+    --     as = 'moonbow',
+    --     config = function()
+    --         vim.cmd('colorscheme moonbow')
+    --     end
+    -- })
+    use {
+        "loctvl842/monokai-pro.nvim",
         config = function()
-            vim.cmd('colorscheme moonbow')
+            require("monokai-pro").setup()
+            vim.cmd([[colorscheme monokai-pro]])
         end
-    })
-
+    }
+    -- end theme
+    -------------------------------------------------------
     use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
     use('nvim-treesitter/nvim-treesitter-context')
     use('nvim-treesitter/playground')
