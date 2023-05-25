@@ -25,7 +25,6 @@ return require('packer').startup(function(use)
         "loctvl842/monokai-pro.nvim",
         config = function()
             require("monokai-pro").setup()
-            vim.cmd([[colorscheme monokai-pro]])
         end
     }
     -- end theme

@@ -1,9 +1,10 @@
 vim.g.mapleader = " "
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
+vim.cmd([[colorscheme monokai-pro]])
 
 -- vim.opt.background = "dark" -- set this to dark or light
 
-vim.opt.cursorline = true   -- highlight the current line
+vim.opt.cursorline = true -- highlight the current line
 
 vim.keymap.set("n", "<leader>cr", "<cmd>CargoRun --release<CR>")
 vim.keymap.set("n", "<leader>ct", "<cmd>CargoTest<CR>")
