@@ -101,7 +101,7 @@ return require('packer').startup(function(use)
         end
     }
 
-    use('mattn/emmet-vim')
+    -- use('mattn/emmet-vim')
 
     -- use {
     --     'lukas-reineke/indent-blankline.nvim',
