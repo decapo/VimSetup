@@ -14,20 +14,23 @@ return require('packer').startup(function(use)
 
     -------------------------------------------------------
     -- begin theme
-    -- use({
-    --     'arturgoms/moonbow.nvim',
-    --     as = 'moonbow',
-    --     config = function()
-    --         vim.cmd('colorscheme moonbow')
-    --     end
-    -- })
-    use {
-        "loctvl842/monokai-pro.nvim",
+
+    use({
+        'arturgoms/moonbow.nvim',
+        as = 'moonbow',
         config = function()
-            require("monokai-pro").setup()
+            vim.cmd('colorscheme moonbow')
         end
-    }
-    -- end theme
+    })
+
+    -- use {
+    --     "loctvl842/monokai-pro.nvim",
+    --     config = function()
+    --         require("monokai-pro").setup()
+    --         vim.cmd('colorscheme monokai-pro')
+    --     end
+    -- }
+    -- -- end theme
 
     use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
     use('nvim-treesitter/nvim-treesitter-context')

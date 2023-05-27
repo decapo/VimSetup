@@ -1,6 +1,5 @@
 vim.g.mapleader = " "
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
-vim.cmd([[colorscheme monokai-pro]])
 
 -- vim.opt.background = "dark" -- set this to dark or light
 
