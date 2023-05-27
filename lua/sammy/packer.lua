@@ -28,7 +28,7 @@ return require('packer').startup(function(use)
         end
     }
     -- end theme
-    -------------------------------------------------------
+
     use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
     use('nvim-treesitter/nvim-treesitter-context')
     use('nvim-treesitter/playground')
@@ -37,7 +37,7 @@ return require('packer').startup(function(use)
     use('tpope/vim-fugitive')
     use {
         'VonHeikemen/lsp-zero.nvim',
-        branch = 'v1.x',
+        branch = 'v2.x',
         requires = {
             -- LSP Support
             { 'neovim/nvim-lspconfig' },             -- Required
@@ -190,7 +190,7 @@ return require('packer').startup(function(use)
             "SmiteshP/nvim-navic",
             "nvim-tree/nvim-web-devicons", -- optional dependency
         },
-        after = "nvim-web-devicons", -- keep this if you're using NvChad
+        after = "nvim-web-devicons",       -- keep this if you're using NvChad
         config = function()
             require("barbecue").setup
             {
