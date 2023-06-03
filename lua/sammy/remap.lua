@@ -16,6 +16,17 @@ vim.keymap.set("n", "<leader>j", "<C-w>j")
 vim.keymap.set("n", "<leader>k", "<C-w>k")
 vim.keymap.set("n", "<leader>nn", "<C-w><C-v>")
 
+-- change inner word when pressing enter in normal mode, likely to remove this later
+vim.keymap.set("n", "<cr>", "ciw")
+
+-- control backspace deletes word backwards in insert mode
+vim.keymap.set("i", "<C-BS>", "<Esc>cvb", { })
+
+vim.keymap.set("n", ";", "<cmd>lua require('telescope.builtin').resume(require('telescope.themes').get_ivy({}))<cr>", opts)
+
+-- dont change cursor location after yanking in visual mode
+vim.keymap.set("v", "y", "ygv<esc>")
+
 vim.keymap.set("n", "<leader>;", "<cmd>FineCmdline<CR>")
 
 vim.keymap.set("n", "#", "^")
