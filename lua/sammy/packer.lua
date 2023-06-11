@@ -181,4 +181,9 @@ return require('packer').startup(function(use)
             }
         end,
     })
+
+    use { "tzachar/highlight-undo.nvim",
+        config = function()
+            require("highlight-undo").setup()
+        end }
 end)
