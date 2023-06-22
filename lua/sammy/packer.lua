@@ -62,7 +62,15 @@ return require('packer').startup(function(use)
     }
     use("github/copilot.vim")
     use("tpope/vim-commentary")
-    use('ggandor/leap.nvim')
+
+    -- best plugin ive had the pleasure of using
+    use {
+        "folke/flash.nvim",
+        config = function()
+            require("flash").setup()
+        end
+    }
+
     use('RRethy/vim-illuminate')
     use('junegunn/fzf')
     use('junegunn/fzf.vim')
@@ -191,9 +199,6 @@ return require('packer').startup(function(use)
 
     use {
         "pmizio/typescript-tools.nvim",
-        requires = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
-        config = function()
-            require("typescript-tools").setup {}
-        end,
+        requires = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" }
     }
 end)

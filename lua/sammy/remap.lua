@@ -18,9 +18,10 @@ vim.keymap.set("n", "<leader>nn", "<C-w><C-v>")
 vim.keymap.set("n", "<cr>", "ciw")
 
 -- control backspace deletes word backwards in insert mode
-vim.keymap.set("i", "<C-BS>", "<Esc>cvb", { })
+vim.keymap.set("i", "<C-BS>", "<Esc>cvb", {})
 
-vim.keymap.set("n", ";", "<cmd>lua require('telescope.builtin').resume(require('telescope.themes').get_ivy({}))<cr>", opts)
+vim.keymap.set("n", ";", "<cmd>lua require('telescope.builtin').resume(require('telescope.themes').get_ivy({}))<cr>",
+    opts)
 
 -- dont change cursor location after yanking in visual mode
 vim.keymap.set("v", "y", "ygv<esc>")
@@ -83,11 +84,15 @@ vim.keymap.set("n", "<leader>r", ":Rg<CR>")
 vim.keymap.set("n", "<leader>o", "o<Esc>")
 vim.keymap.set("n", "<leader>O", "O<Esc>")
 
-require('leap').add_default_mappings()
-vim.keymap.set("n", "s", function()
-    local current_window = vim.fn.win_getid()
-    require('leap').leap { target_windows = { current_window } }
+vim.keymap.set({ "n", "o", "x" }, "s",
+    function()
+        require("flash").jump()
+    end)
+
+vim.keymap.set({ "n", "o", "x" }, "S", function()
+    require("flash").treesitter()
 end)
+
 
 require('neoscroll').setup()
 
