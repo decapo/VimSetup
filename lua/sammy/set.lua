@@ -2,6 +2,16 @@
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
+vim.o.background = "dark"
+
+-- require('text-to-colorscheme').setup {
+--   ai = {
+--     openai_api_key = os.getenv("OPENAI_API_KEY"),
+--   },
+-- }
+
+-- vim.cmd([[colorscheme text-to-colorscheme]])
+
 -- set termguicolors to enable highlight groups
 vim.opt.termguicolors = true
 

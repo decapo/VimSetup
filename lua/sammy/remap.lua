@@ -1,8 +1,6 @@
 vim.g.mapleader = " "
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 
--- vim.opt.background = "dark" -- set this to dark or light
-
 vim.opt.cursorline = true -- highlight the current line
 
 vim.keymap.set("n", "<leader>cr", "<cmd>CargoRun --release<CR>")
