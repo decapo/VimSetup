@@ -15,13 +15,32 @@ return require('packer').startup(function(use)
     -------------------------------------------------------
     -- begin theme
 
-    use({
-        'arturgoms/moonbow.nvim',
-        as = 'moonbow',
+    -- use({
+    --     'arturgoms/moonbow.nvim',
+    --     as = 'moonbow',
+    --     config = function()
+    --         vim.cmd('colorscheme moonbow')
+    --     end
+    -- })
+
+    -- use {
+    --     'dasupradyumna/midnight.nvim',
+    --     as = 'midnight',
+    --     config = function()
+    --         vim.cmd('colorscheme midnight')
+    --         require("midnight").setup()
+    --     end
+    -- }
+
+    use {
+        'ribru17/bamboo.nvim',
+        as = 'bamboo',
         config = function()
-            vim.cmd('colorscheme moonbow')
+            require("bamboo").setup()
+            require('bamboo').load()
         end
-    })
+    }
+
 
     -- use {
     --     "loctvl842/monokai-pro.nvim",
