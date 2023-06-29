@@ -86,7 +86,22 @@ return require('packer').startup(function(use)
     use {
         "folke/flash.nvim",
         config = function()
-            require("flash").setup()
+            require("flash").setup {
+                highlight = {
+                    -- show a backdrop with hl FlashBackdrop
+                    backdrop = false,
+                    -- Highlight the search matches
+                    matches = true,
+                    -- extmark priority
+                    priority = 5000,
+                    groups = {
+                        match = "FlashMatch",
+                        current = "FlashCurrent",
+                        backdrop = "FlashBackdrop",
+                        label = "FlashLabel",
+                    },
+                },
+            }
         end
     }
 
@@ -119,7 +134,6 @@ return require('packer').startup(function(use)
 
     use('tpope/vim-surround')
 
-    -- use('itchyny/lightline.vim')
     use {
         'nvim-lualine/lualine.nvim',
         options = {
@@ -131,16 +145,6 @@ return require('packer').startup(function(use)
         end
     }
 
-    -- use('mattn/emmet-vim')
-
-    -- use {
-    --     'lukas-reineke/indent-blankline.nvim',
-    --     config = function()
-    --         require('indent_blankline').setup()
-    --     end
-    -- }
-
-    -- Lua
     use {
         'abecodes/tabout.nvim',
         config = function()
@@ -151,6 +155,7 @@ return require('packer').startup(function(use)
     }
 
     -- use('stevearc/dressing.nvim')
+    --
     use {
         'VonHeikemen/fine-cmdline.nvim',
         requires = {
@@ -159,6 +164,7 @@ return require('packer').startup(function(use)
     }
 
     use('timonv/vim-cargo')
+
     -- use('godlygeek/tabular')
 
     use {
