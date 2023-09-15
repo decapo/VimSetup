@@ -32,14 +32,14 @@ return require('packer').startup(function(use)
     --     end
     -- }
 
-    use {
-        'ribru17/bamboo.nvim',
-        as = 'bamboo',
-        config = function()
-            require("bamboo").setup()
-            require('bamboo').load()
-        end
-    }
+    -- use {
+    --     'ribru17/bamboo.nvim',
+    --     as = 'bamboo',
+    --     config = function()
+    --         require("bamboo").setup()
+    --         require('bamboo').load()
+    --     end
+    -- }
 
 
     -- use {
@@ -49,6 +49,15 @@ return require('packer').startup(function(use)
     --         vim.cmd('colorscheme monokai-pro')
     --     end
     -- }
+
+    use {
+        "dotsilas/darcubox-nvim",
+        config = function()
+            vim.cmd('colorscheme darcubox')
+        end
+    }
+
+
     -- -- end theme
 
     use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
@@ -188,8 +197,6 @@ return require('packer').startup(function(use)
 
     use("wintermute-cell/gitignore.nvim")
 
-    use('evanleck/vim-svelte')
-
     use {
         "folke/trouble.nvim",
         config = function()
@@ -221,9 +228,4 @@ return require('packer').startup(function(use)
         end }
 
     use { "svermeulen/text-to-colorscheme.nvim" }
-
-    use {
-        "pmizio/typescript-tools.nvim",
-        requires = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" }
-    }
 end)

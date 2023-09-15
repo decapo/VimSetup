@@ -79,12 +79,6 @@ _G.packer_plugins = {
     path = "/Users/sammynouri/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
-  bamboo = {
-    config = { "\27LJ\2\nM\0\0\3\0\4\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\0016\0\0\0'\2\1\0B\0\2\0029\0\3\0B\0\1\1K\0\1\0\tload\nsetup\vbamboo\frequire\0" },
-    loaded = true,
-    path = "/Users/sammynouri/.local/share/nvim/site/pack/packer/start/bamboo",
-    url = "https://github.com/ribru17/bamboo.nvim"
-  },
   ["barbecue.nvim"] = {
     config = { "\27LJ\2\nO\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\ntheme\16monokai-pro\nsetup\rbarbecue\frequire\0" },
     load_after = {
@@ -131,13 +125,19 @@ _G.packer_plugins = {
     path = "/Users/sammynouri/.local/share/nvim/site/pack/packer/start/crates.nvim",
     url = "https://github.com/saecki/crates.nvim"
   },
+  ["darcubox-nvim"] = {
+    config = { "\27LJ\2\n8\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\25colorscheme darcubox\bcmd\bvim\0" },
+    loaded = true,
+    path = "/Users/sammynouri/.local/share/nvim/site/pack/packer/start/darcubox-nvim",
+    url = "https://github.com/dotsilas/darcubox-nvim"
+  },
   ["fine-cmdline.nvim"] = {
     loaded = true,
     path = "/Users/sammynouri/.local/share/nvim/site/pack/packer/start/fine-cmdline.nvim",
     url = "https://github.com/VonHeikemen/fine-cmdline.nvim"
   },
   ["flash.nvim"] = {
-    config = { "\27LJ\2\nÎ\1\0\0\5\0\b\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\6\0005\3\3\0005\4\4\0=\4\5\3=\3\a\2B\0\2\1K\0\1\0\14highlight\1\0\0\vgroups\1\0\4\rbackdrop\18FlashBackdrop\nmatch\15FlashMatch\fcurrent\17FlashCurrent\nlabel\15FlashLabel\1\0\3\fmatches\2\rpriority\3ˆ'\rbackdrop\1\nsetup\nflash\frequire\0" },
+    config = { "\27LJ\2\nÎ\1\0\0\5\0\b\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\6\0005\3\3\0005\4\4\0=\4\5\3=\3\a\2B\0\2\1K\0\1\0\14highlight\1\0\0\vgroups\1\0\4\fcurrent\17FlashCurrent\rbackdrop\18FlashBackdrop\nlabel\15FlashLabel\nmatch\15FlashMatch\1\0\3\rpriority\3ˆ'\rbackdrop\1\fmatches\2\nsetup\nflash\frequire\0" },
     loaded = true,
     path = "/Users/sammynouri/.local/share/nvim/site/pack/packer/start/flash.nvim",
     url = "https://github.com/folke/flash.nvim"
@@ -313,11 +313,6 @@ _G.packer_plugins = {
     path = "/Users/sammynouri/.local/share/nvim/site/pack/packer/start/trouble.nvim",
     url = "https://github.com/folke/trouble.nvim"
   },
-  ["typescript-tools.nvim"] = {
-    loaded = true,
-    path = "/Users/sammynouri/.local/share/nvim/site/pack/packer/start/typescript-tools.nvim",
-    url = "https://github.com/pmizio/typescript-tools.nvim"
-  },
   undotree = {
     loaded = true,
     path = "/Users/sammynouri/.local/share/nvim/site/pack/packer/start/undotree",
@@ -347,35 +342,26 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/sammynouri/.local/share/nvim/site/pack/packer/start/vim-surround",
     url = "https://github.com/tpope/vim-surround"
-  },
-  ["vim-svelte"] = {
-    loaded = true,
-    path = "/Users/sammynouri/.local/share/nvim/site/pack/packer/start/vim-svelte",
-    url = "https://github.com/evanleck/vim-svelte"
   }
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: darcubox-nvim
+time([[Config for darcubox-nvim]], true)
+try_loadstring("\27LJ\2\n8\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\25colorscheme darcubox\bcmd\bvim\0", "config", "darcubox-nvim")
+time([[Config for darcubox-nvim]], false)
 -- Config for: lualine.nvim
 time([[Config for lualine.nvim]], true)
 try_loadstring("\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\flualine\frequire\0", "config", "lualine.nvim")
 time([[Config for lualine.nvim]], false)
--- Config for: bamboo
-time([[Config for bamboo]], true)
-try_loadstring("\27LJ\2\nM\0\0\3\0\4\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\0016\0\0\0'\2\1\0B\0\2\0029\0\3\0B\0\1\1K\0\1\0\tload\nsetup\vbamboo\frequire\0", "config", "bamboo")
-time([[Config for bamboo]], false)
+-- Config for: highlight-undo.nvim
+time([[Config for highlight-undo.nvim]], true)
+try_loadstring("\27LJ\2\n<\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\19highlight-undo\frequire\0", "config", "highlight-undo.nvim")
+time([[Config for highlight-undo.nvim]], false)
 -- Config for: nvim-colorizer.lua
 time([[Config for nvim-colorizer.lua]], true)
 try_loadstring("\27LJ\2\n7\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\14colorizer\frequire\0", "config", "nvim-colorizer.lua")
 time([[Config for nvim-colorizer.lua]], false)
--- Config for: trouble.nvim
-time([[Config for trouble.nvim]], true)
-try_loadstring("\27LJ\2\nC\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\nicons\1\nsetup\ftrouble\frequire\0", "config", "trouble.nvim")
-time([[Config for trouble.nvim]], false)
--- Config for: flash.nvim
-time([[Config for flash.nvim]], true)
-try_loadstring("\27LJ\2\nÎ\1\0\0\5\0\b\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\6\0005\3\3\0005\4\4\0=\4\5\3=\3\a\2B\0\2\1K\0\1\0\14highlight\1\0\0\vgroups\1\0\4\rbackdrop\18FlashBackdrop\nmatch\15FlashMatch\fcurrent\17FlashCurrent\nlabel\15FlashLabel\1\0\3\fmatches\2\rpriority\3ˆ'\rbackdrop\1\nsetup\nflash\frequire\0", "config", "flash.nvim")
-time([[Config for flash.nvim]], false)
 -- Config for: crates.nvim
 time([[Config for crates.nvim]], true)
 try_loadstring("\27LJ\2\n4\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\vcrates\frequire\0", "config", "crates.nvim")
@@ -384,10 +370,14 @@ time([[Config for crates.nvim]], false)
 time([[Config for nvim-autopairs]], true)
 try_loadstring("\27LJ\2\n@\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0", "config", "nvim-autopairs")
 time([[Config for nvim-autopairs]], false)
--- Config for: highlight-undo.nvim
-time([[Config for highlight-undo.nvim]], true)
-try_loadstring("\27LJ\2\n<\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\19highlight-undo\frequire\0", "config", "highlight-undo.nvim")
-time([[Config for highlight-undo.nvim]], false)
+-- Config for: trouble.nvim
+time([[Config for trouble.nvim]], true)
+try_loadstring("\27LJ\2\nC\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\nicons\1\nsetup\ftrouble\frequire\0", "config", "trouble.nvim")
+time([[Config for trouble.nvim]], false)
+-- Config for: flash.nvim
+time([[Config for flash.nvim]], true)
+try_loadstring("\27LJ\2\nÎ\1\0\0\5\0\b\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\6\0005\3\3\0005\4\4\0=\4\5\3=\3\a\2B\0\2\1K\0\1\0\14highlight\1\0\0\vgroups\1\0\4\fcurrent\17FlashCurrent\rbackdrop\18FlashBackdrop\nlabel\15FlashLabel\nmatch\15FlashMatch\1\0\3\rpriority\3ˆ'\rbackdrop\1\fmatches\2\nsetup\nflash\frequire\0", "config", "flash.nvim")
+time([[Config for flash.nvim]], false)
 -- Load plugins in order defined by `after`
 time([[Sequenced loading]], true)
 vim.cmd [[ packadd nvim-cmp ]]
